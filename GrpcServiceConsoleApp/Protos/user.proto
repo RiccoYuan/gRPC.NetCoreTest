@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Protos";
+
+package Grpc.User;
+
+service User {
+	rpc SayHi (SayHiRequest) returns (SayHiResponse);
+}
+
+message SayHiRequest {
+	string name = 1;
+}
+
+message SayHiResponse {
+	string message = 1;
+}
+
